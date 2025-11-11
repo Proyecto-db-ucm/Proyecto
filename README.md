@@ -74,9 +74,71 @@ Funcionalidades clave:
 ## Inicio Rápido
 
 ### Prerrequisitos
+
 ```bash
-- Java 17 (JDK)
-- Node.js 18+ (npm)
-- Oracle Database XE o instancia en la nube
-- Maven 3.9+
-- Git
+- Java 17 (JDK) → Descarga: https://adoptium.net/
+- Node.js 18+ (incluye npm) → Descarga: https://nodejs.org/
+- Oracle Database XE (Express Edition) → Descarga: https://www.oracle.com/database/technologies/appdev/xe.html
+- Maven 3.9+ → (Opcional: usa `./mvnw` si no lo tienes instalado)
+- Git → Descarga: https://git-scm.com/
+- Docker + Docker Compose → (Solo si usas el modo Docker) → https://www.docker.com/
+```
+
+### Arranque
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/tu-usuario/residencial-del-maule-crud.git
+# → Este comando descarga una copia completa del repositorio desde GitHub a tu máquina local,
+#    creando una carpeta con el nombre del proyecto. Útil para obtener el código fuente inicial.
+
+cd residencial-del-maule-crud
+# → Cambia el directorio actual a la carpeta del proyecto recién clonado, para que todos los
+#    comandos posteriores se ejecuten dentro de él.
+
+# SI ES QUE YA TIENE LA COPIA ACTUAL DEL REPOSITORIO IGNORE ESTE COMANDO!!!
+```
+---
+### TERMINAL 1: Backend (Spring Boot + Maven)
+```bash
+cd FOLDER-BACKEND
+# direccion en donde guarda el folder del backend
+./mvnw spring-boot:run
+# → Ejecuta Maven Wrapper (./mvnw) para compilar el código Java, resolver dependencias (como ojdbc para Oracle),
+#     y levantar el servidor Spring Boot. Esto inicia la API REST en el puerto 8080, permitiendo que el frontend
+#     se conecte a ella. Si hay errores, verifica las dependencias en pom.xml.
+
+# → API REST en http://localhost:8080 → Aquí puedes probar endpoints como /api/habitaciones directamente.
+
+# → Swagger UI en http://localhost:8080/swagger-ui.html → Interfaz gráfica para documentar y probar la API automáticamente.
+```
+---
+### TERMINAL 2: Frontend (React + Vite)
+```bash
+cd FOLDER-FRONT
+# → NOMBRE DE LA CARPETA DONDE SE ALOGA EL PROYECTO FRONT-END
+
+npm install
+# → Instala todas las dependencias del frontend definidas en package.json (como React, Tailwind CSS,
+#      Axios para llamadas API). Esto crea la carpeta node_modules. Ejecuta solo la primera vez
+#      o si cambian dependencias; puede tardar unos minutos dependiendo de tu conexión.
+
+
+npm run dev
+# → Inicia el servidor de desarrollo de Vite, que compila el código React en tiempo real, habilita
+#     hot reload (cambios se ven inmediatamente), y sirve la aplicación en el puerto 5173. Ideal para
+#     desarrollo; usa 'npm run build' para producción.
+# → App en http://localhost:5173 → Abre esta URL en tu navegador para ver la interfaz del sistema
+#    (conecta automáticamente al backend en 8080).
+
+# ESTO PERMITE ARRANCAR EL FRONT
+```
+---
+### Con Docker (Recomendado – 1 solo comando)
+```bash
+git clone https://github.com/tu-usuario/residencial-del-maule-crud.git
+cd residencial-del-maule-crud
+
+docker-compose up --build
+# → Construye y levanta contenedores para frontend, backend y Oracle DB. '--build' recompila
+#     imágenes si hay cambios. Ejecuta en una terminal; presiona Ctrl+C para detener.
+```
