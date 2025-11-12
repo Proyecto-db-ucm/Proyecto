@@ -19,13 +19,17 @@
   <strong>Sistema de gestión integral para hostal en Linares, Chile</strong>
 </p>
 
-<p align="center">
-  <a href="#-tecnologías">Tecnologías</a> •
-  <a href="#-inicio-rápido">Inicio Rápido</a> •
-  <a href="#-docker">Docker</a> •
-  <a href="#-estructura">Estructura</a> •
-  <a href="#-contribuir">Contribuir</a>
-</p>
+### Tabla de Contenidos
+
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Características Principales](#características-principales)
+- [Inicio Rápido](#inicio-rápido)
+  - [Prerrequisitos](#prerrequisitos)
+  - [Arranque](#arranque)
+  - [TERMINAL 1: Backend (Spring Boot + Maven)](#terminal-1-backend-spring-boot--maven)
+  - [TERMINAL 2: Frontend (React + Vite)](#terminal-2-frontend-react--vite)
+  - [Con Docker (Recomendado – 1 solo comando)](#con-docker-recomendado--1-solo-comando)
 
 ---
 
