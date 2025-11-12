@@ -29,7 +29,7 @@
   - [Arranque](#arranque)
   - [TERMINAL 1: Backend (Spring Boot + Maven)](#terminal-1-backend-spring-boot--maven)
   - [TERMINAL 2: Frontend (React + Vite)](#terminal-2-frontend-react--vite)
-  - [Con Docker (Recomendado – 1 solo comando)](#con-docker-recomendado--1-solo-comando)
+  - [Con Docker version beta (Recomendado – 1 solo comando)](#con-docker-beta-recomendado--1-solo-comando)
 
 ---
 
@@ -137,7 +137,8 @@ npm run dev
 # ESTO PERMITE ARRANCAR EL FRONT
 ```
 ---
-### Con Docker (Recomendado – 1 solo comando)
+### Con Docker BETA (Recomendado – 1 solo comando) 
+
 ```bash
 git clone https://github.com/tu-usuario/residencial-del-maule-crud.git
 cd residencial-del-maule-crud
